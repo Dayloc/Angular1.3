@@ -1,0 +1,28 @@
+<div class="container m-2 text-center">Listado de heroes</div>
+
+<div class="row">
+
+<div class="col-4 text-center">
+  <h3>Listado de heroes</h3>
+  <ul>
+    <li *ngFor="let item of heroesList">{{item}}</li>
+  </ul>
+
+
+</div>
+
+<div class="col-4 text-center">
+  <h3>Acciones</h3>
+  <button class="btn btn-info" (click)="deleteUltimoHeroe()">Eliminar ultimo heroe</button>
+  <button class="btn btn-info mt-2"  (click)="resetListado()">Reset</button>
+
+</div>
+
+<div class="col-4">
+  <h3>Lista de heroes eliminados</h3>
+  <ul>
+    <li *ngFor="let item of heroesEliminados" class="text-decoration-line-through text-danger">{{item}}</li>
+  </ul>
+</div>
+
+</div>

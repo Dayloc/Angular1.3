@@ -1,0 +1,29 @@
+
+<div class="row text-center">
+
+  <h2 class="mb-3 ">{{heroe}}</h2>
+
+  <div class="col-6">
+
+
+    <h4>Name: {{heroe}}</h4>
+    <h5>Edad: {{age}}</h5>
+
+  </div>
+  <div class="col-6">
+    <h5>Hola soy  {{heroe}} y tengo  {{age}} </h5>
+
+  </div>
+
+<button class="btn btn-info mb-2" *ngIf="heroe==='Ironman'" (click)="cambiarHeroe()">Cambiar heroe</button>
+
+
+<button class="btn btn-info" *ngIf="age===45" (click)="cambiarAge()">Cambiar edad</button>
+
+<button type="button" *ngIf="heroe!=='Ironman' && age!==45" class="btn btn-info mt-2" (click)="volver()"> Volver</button>
+</div>
+
+
+
+
+
