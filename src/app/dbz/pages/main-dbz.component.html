@@ -1,33 +1,12 @@
 <div class="container text-center">
+  <h2 class="m-4">Trabajo con Dbz</h2>
 
-      <h2 class="m-4">Trabajo con  Dbz</h2>
-
-          <div class="row  bg-primary-subtle ">
-
-              <div class="col">
-                <app-listado [ListaPersonajes]="personajes"></app-listado>
-
-              </div>
-              <div class="col">
-
-                <app-agregar></app-agregar>
-
-              </div>
-
-        </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  <div class="row bg-primary-subtle">
+    <div class="col">
+      <app-listado [ListaPersonajes]="personajes"></app-listado>
+    </div>
+    <div class="col">
+      <app-agregar (onNewPersonaje)="onNewPersonaje($event)"></app-agregar>
+    </div>
+  </div>
 </div>

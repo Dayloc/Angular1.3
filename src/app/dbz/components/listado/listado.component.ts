@@ -6,34 +6,34 @@ import { Personaje } from '../../interfaces/personajes.interface';
   standalone: false,
 
   templateUrl: './listado.component.html',
-  styleUrl: './listado.component.css'
+  styleUrl: './listado.component.css',
 })
 export class ListadoComponent {
-
   @Input()
-  public ListaPersonajes:Personaje[]=[{
-    name: 'Spiderman',
-    power: 300
-  },
-  {
-    name: 'Batman',
-    power: 1000
-  },
-  {
-    name: 'Hulk',
-    power: 800
-  },
-  {
-    name: 'Ironman',
-    power: 1500
-  },
-  {
-    name: 'Thor',
-    power: 10000
+  public ListaPersonajes: Personaje[] = [
+    {
+      name: 'Spiderman',
+      power: 300,
+    },
+    {
+      name: 'Batman',
+      power: 1000,
+    },
+    {
+      name: 'Hulk',
+      power: 800,
+    },
+    {
+      name: 'Ironman',
+      power: 1500,
+    },
+    {
+      name: 'Thor',
+      power: 10000,
+    },
+  ];
+  deletePersonaje(index: number): void {
+    this.ListaPersonajes.splice(index, 1);
+    console.log(index);
   }
-
-
-
-]
-
 }

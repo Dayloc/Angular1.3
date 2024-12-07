@@ -1,22 +1,28 @@
-
-<h3  class="text-bg-info">Listado de personajes</h3>
+<h3 class="text-bg-info">Listado de personajes</h3>
 <ul class="list -group">
-  <li class="list-group-item "
+  <li
+    class="list-group-item d-flex justify-content-between mt-1 align-items-center"
+    *ngFor="
+      let item of ListaPersonajes;
+      let i = index;
+      let isFirst = first;
+      let isLast = last;
+      let isEven = even;
+      let isOdd = odd
+    "
+    [ngClass]="{
+      'list-group-item-danger': isLast,
+      'list-group-item-dark': isFirst,
+      'list-group-item-light': isEven
+    }"
+  >
+    <div>
+      <span class="text-danger mt-1">{{ i + 1 }}.</span> {{ item.name }} --
+      {{ item.power }}
+    </div>
 
-    *ngFor="let item of ListaPersonajes;
-     let i =index;
-     let isFirst=first;
-     let isLast=last;
-     let isEven=even;
-     let isOdd=odd;"
-
-      [ngClass]="{'list-group-item-danger': isLast,
-                  'list-group-item-dark': isFirst,
-                  'list-group-item-light': isEven}"
-
-     >
-    <span class="text-danger">{{i+1}}.</span> {{item.name}} -- {{item.power}}
-
+    <button type="button" class="btn btn-danger" (click)="deletePersonaje(i)">
+      X
+    </button>
   </li>
-
 </ul>
