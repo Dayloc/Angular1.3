@@ -1,6 +1,22 @@
 
 <h3  class="text-bg-info">Listado de personajes</h3>
 <ul class="list -group">
-  <li class="li st-group-item"  *ngFor="let item of ListaPersonajes">{{item.name}} -- {{item.power}}</li>
+  <li class="list-group-item "
+
+    *ngFor="let item of ListaPersonajes;
+     let i =index;
+     let isFirst=first;
+     let isLast=last;
+     let isEven=even;
+     let isOdd=odd;"
+
+      [ngClass]="{'list-group-item-danger': isLast,
+                  'list-group-item-dark': isFirst,
+                  'list-group-item-light': isEven}"
+
+     >
+    <span class="text-danger">{{i+1}}.</span> {{item.name}} -- {{item.power}}
+
+  </li>
 
 </ul>

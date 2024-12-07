@@ -25,7 +25,11 @@ export class DbzComponent {
     {
       name: "Piccolo",
       power:600
-    }
+    },
+     {
+      name: "Gohan",
+      power:500
+    },
    ]
 
 }
